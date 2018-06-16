@@ -11,6 +11,7 @@ a.elastic-logo {
     background: url("/static/images/logo/elastic-logo-96x96.png") no-repeat top left;
     background-size: auto 100%;
     padding:15px 5px;
+    margin-left: 10px;
 }
 
 a.elastic-logo span {
@@ -31,8 +32,8 @@ a.elastic-logo span {
     margin-right: 10px;
 }
 
-.site-header.bj-2016 {
-    background: url("https://img.zcool.cn/community/01227257987fd50000018c1bff544e.JPG@1280w_1l_2o_100sh.webp") no-repeat center center/cover;
+.site-header.bg-home {
+    background: url("../images/bg_nanjing.jpg") no-repeat center center/cover;
 }
 
 .valign-center {
@@ -195,10 +196,6 @@ h1, h2, h3, h4, h5, h6 {
 .schedule {}
 .schedule .date-col{
     display: none;
-}
-
-.schedule table.theme-table thead tr th:first-child{
-    width: 30%;
 }
 
 .speaker-brief-topic {}
@@ -590,10 +587,6 @@ h1, h2, h3, h4, h5, h6 {
     .live .screen-wrap .video {
         width: 660px;
         height: 412px;
-    }
-
-    .schedule table.theme-table thead tr th:first-child{
-        width: 15%;
     }
 
 
