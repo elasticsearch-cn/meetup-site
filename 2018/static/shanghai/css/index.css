@@ -33,7 +33,7 @@ a.elastic-logo span {
 }
 
 .site-header.bg-home {
-    background: url("../images/bg_nanjing.jpg") no-repeat center center/cover;
+    background: url("../images/bg_shanghai.jpg") no-repeat center center/cover;
 }
 
 .valign-center {
@@ -193,12 +193,19 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
+.theme .about-text {
+    font-size: 18px;
+}
+
 .schedule {}
 .schedule .date-col{
     display: none;
 }
 
 .speaker-brief-topic {}
+.speaker-brief-topic .speaker-brief-text{
+    font-size: 18px;
+}
 
 .speaker-brief-topic  .speaker-brief .thumbnail:hover {
     box-shadow: 0 0 6px rgba(0,0,0,0.2);
