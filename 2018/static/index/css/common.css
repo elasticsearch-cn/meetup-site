@@ -1,0 +1,20 @@
+@charset "UTF-8";
+img {
+    width: 100%;
+}
+li {
+    list-style: none;
+}
+p {
+    word-break: break-all;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+
+.clear-link a{text-decoration:none;}
+.clear-link a:link{text-decoration:none;}
+.clear-link a:visited{text-decoration:none;}
+.clear-link a:hover{text-decoration:none;}
+.clear-link a:active{text-decoration:none;}
