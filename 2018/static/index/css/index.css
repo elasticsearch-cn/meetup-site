@@ -32,11 +32,12 @@ a.elastic-logo span {
     background-color: #ffffff;
     margin-bottom: 15px;
     min-width: 300px;
+    min-height: 330px;
 }
 
 .item-header {
     position: relative;
-    max-height: 267px;
+    height: 200px;
     overflow: hidden;
 }
 
@@ -44,6 +45,7 @@ a.elastic-logo span {
     position: relative;
     border: 1px solid #ddd;
     border-top-width: 0;
+    height: 130px;
 }
 .item-content .title {
     font-size: 18px;
