@@ -13,8 +13,111 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
 }
 
-.clear-link a{text-decoration:none;}
-.clear-link a:link{text-decoration:none;}
-.clear-link a:visited{text-decoration:none;}
-.clear-link a:hover{text-decoration:none;}
-.clear-link a:active{text-decoration:none;}
+.item-box a{text-decoration:none;}
+.item-box a:link{text-decoration:none;}
+.item-box a:visited{text-decoration:none;}
+.item-box a:hover{text-decoration:none;}
+.item-box a:active{text-decoration:none;}
+
+
+
+/* 网页div弹出层 begin */
+
+#layer {
+    display: none;
+}
+.layer {
+    top: 150px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    -webkit-background-clip: content;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: 1px 1px 50px rgba(0,0,0,.3);
+
+    border-radius: 2px;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: .3s;
+}
+.layer, .layer-shade {
+    position: fixed;
+    _position: absolute;
+    pointer-events: auto;
+}
+
+
+#layer-shade,#layer-elastic-cn {
+    display: none;
+}
+.layer-shade {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+.layer-shade.opacity {
+    background-color: #000;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+}
+
+.show-qrcode {
+    height: 240px;
+    background-color: #fff;
+    box-shadow: none;
+    color: #5A5A5A;
+    z-index: 10000;
+    width: 240px;
+    top: 50%;
+    left: 50%;
+    margin-left:-120px;
+    margin-top:-120px;
+}
+
+.show-qrcode .layer-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.show-qrcode .layer-content.no-padding{
+    padding: 10px;
+}
+
+.layer-content.no-padding .qrcode {
+    width: 220px;
+    min-height: 240px;
+}
+
+.layer-content .qrcode img{
+    width: 100%;
+}
+
+.layer-content .qrcode .des {
+    text-align: center;
+    color: #5A5A5A;
+    margin-top: 4px;
+}
+
+.layer-content .qrcode .title {
+    text-align: center;
+    color: #5A5A5A;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.layer-content .qrcode .wx {
+    line-height: 100px;
+    font-size: 34px;
+    height: 100px;
+}
+
+.layer-content {
+    position: relative;
+    overflow: auto;
+}
+
+/* 网页div弹出层 end */
