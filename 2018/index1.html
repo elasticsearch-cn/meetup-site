@@ -232,7 +232,7 @@
     option = {
 
         title: {
-            text: 'Elastic Meetup 2018 国内线下活动分布图',
+            text: 'Elastic Meetup 2018 线下活动分布图',
             subtext: '',
             sublink: '',
             x:'center',
@@ -313,15 +313,8 @@
     $.get('/static/plugins/echarts/map/china.json', function (chinaJson) {
         echarts.registerMap('china', chinaJson);
         var chart = echarts.init(document.getElementById('main'));
-        // chart.setOption({
-        //     series: [{
-        //         type: 'map',
-        //         map: 'china'
-        //     }]
-        // });
         chart.setOption(option);
     });
-    //myChart.setOption(option);
 
 </script>
 </body>
