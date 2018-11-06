@@ -9,7 +9,6 @@ var geoCoordMap = {
     "杭州":[120.19,30.26],
     "武汉":[114.31,30.52],
     "南京":[116.46,39.92],
-    "苏州":[120.37,31.19],
     "长沙":[113,28.21],
     "台湾":[121.97,24.08],
 
@@ -87,7 +86,6 @@ option = {
                 {name: "杭州",symbol:'pin',value: ""},
                 {name: "武汉",symbol:'pin',value: ""},
                 {name: "南京",symbol:'pin',value: ""},
-                {name: "苏州",symbol:'pin',value: ""},
                 {name: "长沙",symbol:'pin',value: ""},
                 {name: "台湾",symbol:'pin',value: ""},
             ]),
