@@ -117,6 +117,9 @@ h4.hor-tab a{
     line-height: 30px;
     margin-top: 5px;
 }
+.thumbnail a img {
+    width:100%;
+}
 .thumbnail .caption .event-state span.label {
     font-size:85%;
 }
