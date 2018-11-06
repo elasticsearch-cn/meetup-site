@@ -1,55 +1,55 @@
-.year-plan {}
-.year-plan .row .col-md-9{
+.annual-plan {}
+.annual-plan .row .col-md-9{
     padding-bottom: 20px;
     border-bottom: 20px solid #F5F5F5;
 }
-.year-plan .title{
+.annual-plan .title{
     text-align: center;
     padding-top: 30px;
     margin-bottom: 10px;
 }
-.year-plan .tip{
+.annual-plan .tip{
     font-size: 16px;
     color: #898989;
     text-align: center;
     margin-bottom: 20px;
 }
-.year-plan .plan-table{
+.annual-plan .plan-table{
     width: 100%;
 }
-.year-plan .plan-table thead tr {
+.annual-plan .plan-table thead tr {
     background-color: #EEEEEE;
 }
-.year-plan .plan-table thead tr th{
+.annual-plan .plan-table thead tr th{
     padding: 15px 0;
 }
-.year-plan .plan-table tr td{
+.annual-plan .plan-table tr td{
     vertical-align: middle;
 }
-.year-plan .plan-table tr th{
+.annual-plan .plan-table tr th{
     text-align: center;
     vertical-align: middle;
 }
 
-.year-plan .plan-table tr .city{
+.annual-plan .plan-table tr .city{
     width: 15%;
 }
-.year-plan .plan-table tr .date{
+.annual-plan .plan-table tr .date{
     width: 15%;
 }
-.year-plan .plan-table tr .address{
+.annual-plan .plan-table tr .address{
     width: 30%;
 }
-.year-plan .plan-table tr .state{
+.annual-plan .plan-table tr .state{
     width: 20%;
 }
-.year-plan .plan-table tr .partner{
+.annual-plan .plan-table tr .partner{
     width: 20%;
 }
-.year-plan .plan-table tr .btn{
+.annual-plan .plan-table tr .btn{
     padding: 4px 12px;
 }
-.year-plan .plan-table tr span.label{
+.annual-plan .plan-table tr span.label{
     font-size: 85%;
 }
 
