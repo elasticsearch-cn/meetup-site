@@ -1,38 +1,193 @@
 @charset "UTF-8";
+body {
+    font-family: arial,"Hiragino Sans GB", "Microsoft Yahei", 微软雅黑, 宋体, Tahoma, Arial, Helvetica, STHeiti,sans-serif;
+    background-color: #F5F5F5;
+}
+
 img {
     max-width: 100%;
 }
 li {
     list-style: none;
 }
-p {
+p,div,span {
     word-break: break-all;
 }
 .icon {
     display:block;
-
+}
+a.btn.disabled, a.btn[disabled] {
+    background-color: #929292;
+    color: #fff;
 }
 
-.clear-link a{text-decoration:none;}
-.clear-link a:link{text-decoration:none;}
-.clear-link a:visited{text-decoration:none;}
-.clear-link a:hover{text-decoration:none;}
-.clear-link a:active{text-decoration:none;}
+a{text-decoration:none;}
+a:link{text-decoration:none;}
+a:visited{text-decoration:none;}
+a:hover{text-decoration:none;}
+a:active{text-decoration:none;}
 
-.icon.icon-weibo {
-    background: white  url("../images/logo/weibo-logo-48x48.png") no-repeat center;
-    background-size: auto 80%;
-    width: 48px;
-    height: 48px;
-    border-radius: 30px;
+
+
+/**
+nav导航样式
+ */
+
+.navbar-white {
+    background-color: #ffffff;
+    color: #444;
 }
 
-.icon.icon-github {
-    background: white url("../images/logo/github-logo-48x48.png") no-repeat center;
-    background-size: auto 80%;
-    width: 48px;
-    height: 48px;
-    border-radius: 30px;
+ul.nav li a, .navbar-header a.navbar-brand {
+    height: 80px;
+    line-height: 50px;
+    min-width: 80px;
+    text-align: center;
+}
+.navbar-header a.elastic-logo {
+    background: url("/static/images/logo/elastic-logo-96x96.png") no-repeat top 50% left;
+    background-size: auto 70%;
+    padding:15px 5px;
+    margin-left: 10px;
+}
+
+.navbar-header a.elastic-logo span {
+    display: inline-block;
+    padding-left:60px;
+}
+
+.media .media-avatar {
+    display: inline-block;
+}
+
+.panel-block .media .media-avatar {
+    width: 60px!important;
+    height: 60px!important;
+}.panel-block .media .media-body {
+    padding-left: 0!important;
+}
+
+.panel-block>h4{
+    margin-bottom:15px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.hor-tab{
+     border-bottom: 1px solid #ddd;
+     padding-bottom: 5px;
+     margin-bottom: 20px;
+ }
+.hor-tab a{
+    float: right;
+    font-size: 14px;
+    color: #898989;
+    margin-top:8px;
+    font-weight: normal;
+}
+h4.hor-tab{
+    margin-bottom: 15px;
+}
+h4.hor-tab a{
+    margin-top:3px;
+}
+
+.home .thumbnail, .panel-block .thumbnail{
+    padding:0;
+    border-radius: unset;
+}
+.home .thumbnail .caption h4 , .panel-block .thumbnail .caption h4 {
+    font-size: 16px;
+    margin-top:5px;
+}
+.home .thumbnail .caption h4 a, .panel-block .thumbnail .caption h4 a{
+    line-height: 20px;
+    display: -webkit-box;
+    overflow: hidden;
+    height: 40px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.thumbnail .caption .single-line {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.thumbnail .caption .event-state {
+    height: 30px;
+    line-height: 30px;
+    margin-top: 5px;
+}
+.thumbnail .caption .event-state span.label {
+    font-size:85%;
+}
+
+@media (max-width: 812px) {
+    ul.nav li a, .navbar-header a.navbar-brand {
+        height: 40px;
+        line-height: 20px;
+    }
+    .navbar-header a.elastic-logo span {
+        padding-left:40px;
+    }
+    .navbar-header a.elastic-logo {
+        background: url("/static/images/logo/elastic-logo-96x96.png") no-repeat top 6px left;
+        background-size: auto 90%;
+    }
+}
+
+.bg-white {
+    background-color: #ffffff;
+}
+.row.item {
+    margin-bottom: 15px;
+    background-color: #ffffff;
+}
+.panel-block{
+    padding:15px;
+    overflow:hidden;
+    margin-bottom: 15px;
+}
+.carousel .carousel-inner .item img {
+    width: 100%;
+    overflow: hidden;
+}
+.ad{
+    padding:0;
+}
+.ad img{
+    width: 100%;
+    transition: transform .65s;
+}
+.ad img:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2); /*Safari 和 Chrome*/
+    -moz-transform: scale(1.2); /*Firefox*/
+    -ms-transform: scale(1.2); /*IE9*/
+    -o-transform: scale(1.2); /*Opera*/
+}
+
+.icon-wechat {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(/static/images/icon/wechat.png) no-repeat;
+    background-size: 100%;
+    margin-bottom: -3px;
+}
+
+/**
+底部样式
+ */
+.footer {
+    clear: both;
+    margin-top:15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    color: #767676;
+    text-align: center;
+    border-top: 1px solid #e5e5e5;
+    background-color:#f8f8f8;
 }
 
 /* 网页div弹出层 begin */

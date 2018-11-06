@@ -1,0 +1,7 @@
+.home {}
+.home #carousel-banner{
+    margin:15px 0;
+}
+.home .panel {
+    background-color: #F5F5F5;
+}

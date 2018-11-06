@@ -1,0 +1,73 @@
+.organizer {}
+.organizer .row .col-md-9{
+    padding-bottom: 20px;
+    border-bottom: 20px solid #F5F5F5;
+}
+.organizer .user-items {
+    margin-bottom: 30px;
+}
+.organizer .city-list {
+    padding:15px;
+    border: 1px solid #ddd;
+    margin:15px 0;
+}
+.organizer .city-list span{
+    display: inline-block;
+    margin-top:8px;
+    color: #898989;
+    float: left;
+    width: 50px;
+}
+.organizer .city-list ul{
+    margin-bottom: 0;
+    padding-left: 50px;
+}
+.organizer .city-list ul li{
+    display: inline-block;
+    margin: 8px 5px;
+}
+.organizer .city-list ul li a{
+    min-width:40px;
+    text-align: center;
+    padding: 5px 12px;
+}
+.organizer .city-list ul li a:hover, .organizer .city-list ul li a.active{
+    color: #fff;
+    background: #ff5303;
+}
+
+.organizer .media .media-avatar {
+    width: 150px;
+    height: auto;
+}
+.organizer .media .media-body {
+    padding-left: 10px;
+}
+
+.organizer .title {
+    border-bottom: 1px solid #ddd;
+}
+.organizer .title h4 {
+    padding-left: 10px;
+    border-left: 5px solid #1b809e;
+}
+
+#city-map {
+    min-height:500px;
+    width:100%;
+    border:1px solid #ddd;
+    margin: 50px 0;
+}
+
+@media (max-width: 812px) {
+    .organizer .media .media-avatar {
+        width: 80px;
+        height: auto;
+    }
+    .organizer .media .media-body {
+        padding-left: 0;
+    }
+    #city-map {
+        min-height:400px;
+    }
+}
