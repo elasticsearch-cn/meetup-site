@@ -8,11 +8,9 @@ var geoCoordMap = {
     "深圳":[114.07,22.62],
     "杭州":[120.19,30.26],
     "武汉":[114.31,30.52],
-    "南京":[116.46,39.92],
+    "南京":[118.22,31.14],
     "长沙":[113,28.21],
-    "台湾":[121.97,24.08],
-
-
+    "台湾":[121.97,24.08]
 };
 
 var convertData = function (data) {
@@ -87,7 +85,7 @@ option = {
                 {name: "武汉",symbol:'pin',value: ""},
                 {name: "南京",symbol:'pin',value: ""},
                 {name: "长沙",symbol:'pin',value: ""},
-                {name: "台湾",symbol:'pin',value: ""},
+                {name: "台湾",symbol:'pin',value: ""}
             ]),
             roam: true,
             symbolSize: 50,
