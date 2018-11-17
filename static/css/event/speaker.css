@@ -1,0 +1,12 @@
+.speaker {}
+.speaker .title{
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 10px;
+}
+.speaker .tip{
+    font-size: 16px;
+    color: #898989;
+    text-align: center;
+    margin-bottom: 20px;
+}
