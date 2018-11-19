@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="Elastic Meetup 线下活动 elasticsearch Elastic 中文社区">
+    <meta name="description" content="Elastic Meetup 由 Elastic 中文社区(https://elasticsearch.cn/) 每年定期举办的线下交流活动，主要围绕 Elastic 的开源产品（Elasticsearch、Logstash、Kibana 和 Beats）及周边技术，探讨在搜索、数据实时分析、日志分析、安全等领域的实践与应用。">
+    <link rel="shortcut icon" type="image/png" href="/static/images/logo/elastic-logo-32x32.png">
+    <title>历届Elastic线下活动讲师榜单</title>
+
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/common.css" rel="stylesheet">
+    <link href="/static/css/event/speaker.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- 导航 start -->
+<nav class="navbar navbar-default navbar-custom navbar-white">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand elastic-logo" href="/">
+                <span>Elastic Meetup</span>
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/event">首页</a></li>
+                <li><a href="/event/plan">年度计划</a></li>
+                <li><a href="/event/organizer.html">社区组织者</a></li>
+                <li class="active"><a href="/event/speaker">讲师榜单</a></li>
+                <li><a href="/event/about.html">关于我们</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- 导航 end -->
+<div class="container speaker">
+    <div class="row">
+        <div class="col-md-12  bg-white">
+            <h3 class="title">历届Elastic线下活动讲师榜单</h3>
+            <div class="tip">（按讲师姓名拼音字母排序，后续会持续更新更多讲师）</div>
+            <ul class="photos">
+                <!--<li>-->
+                    <!--<a href="list.html">-->
+                        <!--<img class="avatar" src="/static/images/organizer/medcl.png" alt="Medcl">-->
+                        <!--<div class="name">Medcl</div>-->
+                    <!--</a>-->
+                <!--</li>-->
+            </ul>
+        </div>
+    </div>
+
+</div>
+<!-- 底部 start -->
+<footer class="footer">
+    <div class="container">
+        Copyright © <script>document.write(new Date().getFullYear());</script> <span> · <a href="https://elasticsearch.cn/" target="blank">Elastic中文社区</a></span>
+    </div>
+</footer>
+<!-- 底部 end -->
+
+<script src="/static/bootstrap/js/jquery.min.js"></script>
+<script src="/static/bootstrap/js/bootstrap.min.js"></script>
+<script src="/static/plugins/lazyload/jquery.lazyload.min.js"></script>
+<script>
+    $(function () {
+        // jQuery.getJSON( url [, data ] [, success ] )
+        $.getJSON("/static/data/elastic-speakers.json", "", function(data) {
+            var _li = '';
+            for(var i in data) {
+                var obj = data[i];
+                var avatar = getAvatar(obj);
+                _li += '<li>\n' +
+                    '                    <a href="list.html">\n' +
+                    '                        <img class="avatar lazyload" data-original="'+avatar+'" src="" alt="'+obj.name+'">\n' +
+                    '                        <div class="name">'+obj.name+'</div>\n' +
+                    '                    </a>\n' +
+                    '                </li>';
+            }
+            $("ul.photos").append(_li);
+            //头像初始化后再lazyload
+            $("ul.photos img.lazyload").lazyload({
+                effect : "fadeIn", 
+                threshold: 200, // 提前开始加载
+            });
+        });
+
+    });
+
+    /**
+     * 获取头像地址
+     *
+     * @param obj
+     * @returns {*}
+     */
+    function getAvatar(obj) {
+        var avatar = obj.avatar;
+        if(! avatar) {
+            if(obj.more) {
+                //取more中的头像
+                var items = obj.more;
+                for(var i in items) {
+                    if(items[i].avatar) {
+                        avatar = items[i].avatar;
+                        break;
+                    }
+                }
+            } else {
+                //取默认头像
+                avatar = '/static/images/icon/elastic-default.jpg';
+            }
+        }
+        return avatar;
+    }
+</script>
+</body>
+</html>

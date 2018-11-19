@@ -8,7 +8,7 @@
     <meta name="keywords" content="Elastic Meetup 线下活动 elasticsearch Elastic 中文社区">
     <meta name="description" content="Elastic Meetup 由 Elastic 中文社区(https://elasticsearch.cn/) 每年定期举办的线下交流活动，主要围绕 Elastic 的开源产品（Elasticsearch、Logstash、Kibana 和 Beats）及周边技术，探讨在搜索、数据实时分析、日志分析、安全等领域的实践与应用。">
     <link rel="shortcut icon" type="image/png" href="/static/images/logo/elastic-logo-32x32.png">
-    <title>历届Elastic线下活动讲师榜单</title>
+    <title>历届Elastic线下活动讲师榜单详情</title>
 
     <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/static/plugins/bootstrap-table/1.11.0/bootstrap-table.min.css" rel="stylesheet">
@@ -37,9 +37,9 @@
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/event">首页</a></li>
-                <li><a href="/event/plan/">年度计划</a></li>
+                <li><a href="/event/plan">年度计划</a></li>
                 <li><a href="/event/organizer.html">社区组织者</a></li>
-                <li class="active"><a href="/event/speaker.html">历届讲师榜单</a></li>
+                <li class="active"><a href="/event/speaker">讲师榜单</a></li>
                 <li><a href="/event/about.html">关于我们</a></li>
             </ul>
         </div>
@@ -47,6 +47,7 @@
 </nav>
 <!-- 导航 end -->
 <div class="container speaker">
+
     <div class="row">
         <div class="col-md-12  bg-white">
             <h3 class="title">历届Elastic线下活动讲师榜单</h3>
@@ -81,6 +82,7 @@
 <script src="/static/bootstrap/js/bootstrap.min.js"></script>
 <script src="/static/plugins/bootstrap-table/1.11.0/bootstrap-table.min.js"></script>
 <script src="/static/plugins/bootstrap-table/1.11.0/locale/bootstrap-table-zh-CN.min.js"></script>
+<script src="/static/plugins/lazyload/jquery.lazyload.min.js"></script>
 <script>
     $(function () {
         $('#tb_speakers').bootstrapTable({
@@ -116,8 +118,8 @@
 
                 return _table;
             },
-            pageSize: 20,
-            pageList: [20, 50, 100],
+            pageSize: 200,
+            pageList: [200, 500, 1000],
             search: true,
             showColumns: false,
             showRefresh: true,
@@ -129,7 +131,13 @@
                     if(! $td.find('.num-sort').hasClass("has-more")) {
                         $td.first().find("a").css("display",'none');
                     }
-                })
+                });
+
+                //头像初始化后再lazyload
+                $("table img.lazyload").lazyload({
+                    effect : "fadeIn",
+                    threshold: 200, // 提前开始加载
+                });
             },
             onPageChange:function (number, size) {
                 //这里如果不自动刷新，自动折叠功能就失效
@@ -147,11 +155,30 @@
     }
 
     function avatarFormatter(value, row, index) {
-        var avatar = row.avatar;
+        var avatar = getAvatar(row);
+        return '<img class="avatar lazyload" data-original="'+avatar+'" src="" alt="'+row.name+'">';
+    }
+
+    function pptFormatter(value, row, index) {
+       if(value) {
+           return '<a target="_blank" href="'+value+'">查看PPT</a>';
+       } else {
+           return '暂无'
+       }
+    }
+
+    /**
+     * 获取头像地址
+     *
+     * @param obj
+     * @returns {*}
+     */
+    function getAvatar(obj) {
+        var avatar = obj.avatar;
         if(! avatar) {
-            if(row.more) {
+            if(obj.more) {
                 //取more中的头像
-                var items = row.more;
+                var items = obj.more;
                 for(var i in items) {
                     if(items[i].avatar) {
                         avatar = items[i].avatar;
@@ -163,15 +190,7 @@
                 avatar = '/static/images/icon/elastic-default.jpg';
             }
         }
-        return '<img style="width: 60px;height: 60px;overflow: hidden" src="'+avatar+'">';
-    }
-
-    function pptFormatter(value, row, index) {
-       if(value) {
-           return '<a target="_blank" href="'+value+'">查看PPT</a>';
-       } else {
-           return '暂无'
-       }
+        return avatar;
     }
 </script>
 </body>

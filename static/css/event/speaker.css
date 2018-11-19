@@ -11,6 +11,50 @@
     margin-bottom: 20px;
 }
 
+.speaker ul.photos{
+
+}
+.speaker ul.photos li{
+    display: inline-block;
+    margin: 15px;
+}
+.speaker ul.photos li a .avatar{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.speaker ul.photos li a .name{
+    text-align: center;
+    padding-top:10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+/**
+表格 列表样式
+ */
 .speaker table td{
     vertical-align: middle!important;
+}
+
+.speaker table td .avatar{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden
+}
+
+
+@media (max-width: 812px) {
+    .speaker ul.photos{
+        padding-left: 10px;
+    }
+    .speaker ul.photos li{
+        margin: 10px;
+    }
+    .speaker ul.photos li a .avatar{
+        width: 100px;
+        height: 100px;
+    }
 }
