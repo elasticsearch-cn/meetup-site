@@ -156,7 +156,7 @@
 
     function avatarFormatter(value, row, index) {
         var avatar = getAvatar(row);
-        return '<img class="avatar lazyload" data-original="'+avatar+'" src="" alt="'+row.name+'">';
+        return '<a href="javascript:void(0)" title="'+row.brief+'"><img class="avatar lazyload" data-original="'+avatar+'" src="" alt="'+row.name+'"></a>';
     }
 
     function pptFormatter(value, row, index) {

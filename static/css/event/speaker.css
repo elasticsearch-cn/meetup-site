@@ -12,15 +12,20 @@
 }
 
 .speaker ul.photos{
-
+    text-align: center;
+    padding-left: 0;
 }
 .speaker ul.photos li{
     display: inline-block;
     margin: 15px;
 }
-.speaker ul.photos li a .avatar{
+
+.speaker ul.photos li a{
+    display: inline-block;
     width: 120px;
-    height: 120px;
+    min-height: 120px;
+}
+.speaker ul.photos li a .avatar{
     border-radius: 50%;
 }
 .speaker ul.photos li a .name{
@@ -47,14 +52,14 @@
 
 
 @media (max-width: 812px) {
-    .speaker ul.photos{
-        padding-left: 10px;
-    }
     .speaker ul.photos li{
         margin: 10px;
     }
+    .speaker ul.photos li a{
+        width: 90px;
+    }
     .speaker ul.photos li a .avatar{
-        width: 100px;
-        height: 100px;
+        width: 100%;
+        height: auto;
     }
 }
