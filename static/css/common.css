@@ -27,6 +27,14 @@ a:visited{text-decoration:none;}
 a:hover{text-decoration:none;}
 a:active{text-decoration:none;}
 
+/**
+自定义btn样式
+ */
+.signup-share {
+     width: 80%;
+     background-color: #3c8ee0;
+     border: none;
+ }
 
 
 /**
