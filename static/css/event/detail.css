@@ -16,8 +16,9 @@
 .left-side .event-intro .event-content .c-item {
     margin-top: 4px;
 }
-.left-side .event-intro .event-content .c-item:last-child {
+.left-side .event-intro .event-content .c-item.btn-gp {
     margin-top: 15px;
+    text-align: right;
 }
 .left-side .event-intro .event-content .c-item span.text-span{
     color: #898989;
