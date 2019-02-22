@@ -247,9 +247,22 @@
 <script src="/static/bootstrap/js/jquery.min.js"></script>
 <script src="/static/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="//api.map.baidu.com/api?v=3.0&ak=DDU325vxk16zPn6DKlS6Qffx"></script>
-<script src="/static/js/map.js"></script>
+<!--<script src="/static/js/map.js"></script>-->
 <script>
-
+    // 百度地图API功能
+    var map = new BMap.Map("mapContainer");
+    var point = new BMap.Point(104.064023,30.547101);
+    map.centerAndZoom(point,15);
+    var marker = new BMap.Marker(point);  // 创建标注
+    map.addOverlay(marker);              // 将标注添加到地图中
+    map.enableScrollWheelZoom(true);
+    var opts = {
+        width : 200,     // 信息窗口宽度
+        height: 50,     // 信息窗口高度
+        title : "阿里中心" , // 信息窗口标题
+    };
+    var infoWindow = new BMap.InfoWindow("地址：四川省成都市阿里中心101会议室", opts);  // 创建信息窗口对象
+    map.openInfoWindow(infoWindow,point); //开启信息窗口
     // $('.carousel').carousel();
 </script>
 

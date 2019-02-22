@@ -13,6 +13,7 @@ geoc.getPoint(mapAddressDes, function (point) {
         var marker = new BMap.Marker(point);
         map.centerAndZoom(point, 16);
         map.addOverlay(marker);
-        marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+        map.enableScrollWheelZoom(true);
+        marker.setAnimation(BMap.BMAP_ANIMATION_BOUNCE);
     }
 }, mapAddressCity);
