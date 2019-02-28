@@ -251,7 +251,7 @@
 <script>
     // 百度地图API功能
     var map = new BMap.Map("mapContainer");
-    var point = new BMap.Point(104.064023,30.547101);
+    var point = new BMap.Point(113.336612,23.151111);
     map.centerAndZoom(point,15);
     var marker = new BMap.Marker(point);  // 创建标注
     map.addOverlay(marker);              // 将标注添加到地图中
@@ -259,9 +259,9 @@
     var opts = {
         width : 200,     // 信息窗口宽度
         height: 50,     // 信息窗口高度
-        title : "阿里中心" , // 信息窗口标题
+        title : "hobby lab咖啡厅" , // 信息窗口标题
     };
-    var infoWindow = new BMap.InfoWindow("地址：四川省广州市阿里中心101会议室", opts);  // 创建信息窗口对象
+    var infoWindow = new BMap.InfoWindow("地址：广州市海珠区hobby lab咖啡厅", opts);  // 创建信息窗口对象
     map.openInfoWindow(infoWindow,point); //开启信息窗口
     // $('.carousel').carousel();
 </script>
