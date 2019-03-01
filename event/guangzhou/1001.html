@@ -67,7 +67,7 @@
                         </div>
                         <div class="c-item">
                             <span class="text-span">地点：</span>
-                            <span>广州市海珠区hobby lab咖啡厅</span>
+                            <span>广州市海珠区唯品同创汇hobby lab cafe爱好者研究所</span>
                             <a href="#mapContainer">
                                 查看地图
                             </a>
@@ -116,7 +116,7 @@
 
                         <p><strong>活动时间:</strong>  2019年3月30日</p>
 
-                        <p><strong>活动地址:</strong>  广州市海珠区hobby lab咖啡厅</p>
+                        <p><strong>活动地址:</strong>  广州市海珠区唯品同创汇hobby lab cafe爱好者研究所</p>
                     </div>
                 </div>
             </div>
@@ -169,7 +169,7 @@
                                         <img src="/static/images/sponsors/elastic_cn.jpg" title="Elastic中文社区">
                                     </a>
                                 </li>
-                                <li>
+                                <li style="width: 200px;">
                                     <a target="_blank" href="http://www.datastory.com.cn/">
                                         <img src="/static/images/sponsors/datastory.jpg" title="数说故事">
                                     </a>
@@ -196,8 +196,10 @@
                         <h3>地点路线</h3>
                     <div class="des">
                         <p class="map-address-city" style="display: none">广州市</p>
-                        <p class="map-address-des">广州市海珠区hobby lab咖啡厅</p>
-                        <div class="map" id="mapContainer"></div>
+                        <p class="map-address-des">广州市海珠区唯品同创汇hobby lab cafe爱好者研究所(地铁大塘b出口左转)</p>
+                        <div class="map" id="mapContainer">
+                            <img src="/static/images/city/guangzhou/1001/others/map-hobby-lab-cofe.jpg">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -246,25 +248,6 @@
 
 <script src="/static/bootstrap/js/jquery.min.js"></script>
 <script src="/static/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="//api.map.baidu.com/api?v=3.0&ak=DDU325vxk16zPn6DKlS6Qffx"></script>
-<!--<script src="/static/js/map.js"></script>-->
-<script>
-    // 百度地图API功能
-    var map = new BMap.Map("mapContainer");
-    var point = new BMap.Point(113.336612,23.151111);
-    map.centerAndZoom(point,15);
-    var marker = new BMap.Marker(point);  // 创建标注
-    map.addOverlay(marker);              // 将标注添加到地图中
-    map.enableScrollWheelZoom(true);
-    var opts = {
-        width : 200,     // 信息窗口宽度
-        height: 50,     // 信息窗口高度
-        title : "hobby lab咖啡厅" , // 信息窗口标题
-    };
-    var infoWindow = new BMap.InfoWindow("地址：广州市海珠区hobby lab咖啡厅", opts);  // 创建信息窗口对象
-    map.openInfoWindow(infoWindow,point); //开启信息窗口
-    // $('.carousel').carousel();
-</script>
 
 </body>
 </html>
