@@ -11,7 +11,7 @@ geoc.getPoint(mapAddressDes, function (point) {
     if (point) {
         map.clearOverlays();
         var marker = new BMap.Marker(point);
-        map.centerAndZoom(point, 16);
+        map.centerAndZoom(point, 18);
         map.addOverlay(marker);
         map.enableScrollWheelZoom(true);
         marker.setAnimation(BMap.BMAP_ANIMATION_BOUNCE);
