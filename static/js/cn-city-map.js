@@ -11,6 +11,7 @@ var geoCoordMap = {
     "南京":[118.22,31.14],
     "长沙":[113,28.21],
     "成都":[104.07,30.67],
+    "重庆":[106.55,29.55],
     "台湾":[121.97,24.08]
 };
 
@@ -87,7 +88,8 @@ option = {
                 {name: "南京",symbol:'pin',value: ""},
                 {name: "长沙",symbol:'pin',value: ""},
                 {name: "成都",symbol:'pin',value: ""},
-                {name: "台湾",symbol:'pin',value: ""}
+                {name: "重庆",symbol:'pin',value: ""},
+                {name: "台湾",symbol:'pin',value: ""},
             ]),
             roam: true,
             symbolSize: 50,
